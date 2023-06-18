@@ -39,6 +39,20 @@ app.get("/passenger", (req, res) => {
   });
 });
 
+app.post('/submit', (req, res) => {
+  const {name, age, sex, address, book_date, time, origin, destination, category } = req.body;
+
+  const sql = `CALL BookTrainTicket(${name}, ${age}, ${sex}, ${address}, ${book_date}, ${time}, ${origin}, ${destination}, ${category});`;
+
+  db.query(sql, (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: "Internal Server Error" });
+    } else {
+      res.json({ data, message: 'Successfully created' });
+    }
+  });
+});
 app.listen(8888, () => {
   console.log("listening");
 });

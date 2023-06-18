@@ -13,11 +13,11 @@ function BookingForm() {
   };
 
   const onSubmit = async (formData) => {
-   
+
     try {
       // Send a POST request to the server
-      await axios.post("http://localhost:8888/submit", formData); // Update the URL with the correct server address
-  
+      await axios.post("http://localhost:8888/submit", { ...formData }); // Update the URL with the correct server address
+
       // Handle successful submission
       console.log("Form submitted successfully");
       alert("Data successfully added to the database"); // Display success message
@@ -33,18 +33,18 @@ function BookingForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1 className="form-title">BOOK NOW !!!</h1>
-      <label>Your Name:</label><br/>
-      <input className="in_name" type="text" id="name" name="name" {...register('name')} /><br/>
-      <label>Your Age:</label><br/>
-      <input className="in_age" type="text" id="age" name="age" {...register('age')} /><br/>
-      <label>Gender:</label><br/>
+      <label>Your Name:</label><br />
+      <input className="in_name" type="text" id="name" name="name" {...register('name')} /><br />
+      <label>Your Age:</label><br />
+      <input className="in_age" type="text" id="age" name="age" {...register('age')} /><br />
+      <label>Gender:</label><br />
       <select id="genderselect" name="gender" {...register('gender')}>
         <option value="--select--">--select--</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
-      </select><br/>
-      <label>Address:</label><br/>
-      <input className="in_age" type="text" id="address" name="address" {...register('address')} /><br/>
+      </select><br />
+      <label>Address:</label><br />
+      <input className="in_age" type="text" id="address" name="address" {...register('address')} /><br />
       <label htmlFor="origin">Origin:</label><br />
       <select id="originsel" name="origin" {...register('origin')}>
         <option value="New York">CAGAYAN DE ORO CITY</option>
@@ -69,8 +69,8 @@ function BookingForm() {
         <label htmlFor="general">General</label>
         <input type="radio" id="general" name="trainType" value="General" {...register('trainType')} />
       </div>
-      <br/>
-      <label htmlFor="date">Departure Date:</label><br/>
+      <br />
+      <label htmlFor="date">Departure Date:</label><br />
       <DatePicker
         id="idate"
         name="departureDate"
@@ -94,11 +94,11 @@ function BookingForm() {
         <option value="9PM">9PM</option>
         {/* Add more options as needed */}
       </select>
-      <br/><br/>
+      <br /><br />
       <button className="btn btn-outline-success" type="submit">
         SUBMIT
       </button>
-      <br/>
+      <br />
     </form>
   );
 }
