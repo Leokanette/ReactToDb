@@ -1,0 +1,6 @@
+install the following before running on localhost
+
+npm install react-bootstrap
+npm install react-carousel
+npm install react-router-dom
+npm install jquery desandro-matches-selector ev-emitter get-size fizzy-ui-utils outlayer masonry-layout isotope-layout

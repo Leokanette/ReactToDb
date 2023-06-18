@@ -1,0 +1,101 @@
+form {
+    
+    margin-top: 100px;
+    padding:10px;
+     width: 40%;
+    
+     background-color: #f2f2f2;
+     border-radius: 5px;
+     opacity: 0.8;
+    
+ }
+ .form-title{
+    font-weight: bold;
+ }
+ label {
+     display: block;
+     margin-bottom: 3px;
+     text-align: center;
+ }
+ .in_name{
+    width:80%;
+    height:30px;
+ }
+ .in_age{
+    width:80%;
+    height:30px;
+ }
+ #genderselect{
+    width:80%;
+    height:30px;
+ }
+ input[type="date"] {
+     width:80%;
+     padding:5px;
+ }
+ input[type="number"] {
+    
+     width:40%;
+     padding:5px;
+ }
+ #originsel {
+    width:80%;
+     height:30px;
+     font-size: 17px;
+ }
+ #destinationsel {
+     width:80%;
+     height:30px;
+     font-size: 17px;
+ }
+ #timesel{
+    width:80%;
+    height:30px;
+    font-size: 17px;
+ }
+ input[type="submit"] {
+     background-color: green;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ .radio-group{
+     background-color: greenyellow;
+    
+ }
+ .radio-group label {
+     display: inline-block;
+     margin-right:10px;
+     margin-left: 20px;
+    
+ }
+ .traintype{
+     text-align: left;
+ }
+ #date{
+    width:80;
+    height:30px;
+    
+ }
+ .display{
+    padding: 100px;
+ }
+ 
+ .booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+  }
+  .carousel-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  button{
+    width:100px;
+  }

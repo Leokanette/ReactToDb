@@ -1,0 +1,47 @@
+body *{
+    
+    display: flex;
+    margin: 5px;
+    border: 2px solid rgb(235, 230, 230);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+.outerborder{
+    border: 2px solid rgb(255, 255, 255);
+}
+#mainbar{
+    height: 50px;
+    flex-grow: 4;
+}
+#settings{
+    height: 50px;
+    flex-grow: 1;
+}
+#contentBox{
+    height: 90vh;
+}
+#options{
+    flex-grow: 1;
+    flex-direction: column;
+}
+#options div{
+    flex-grow: 1;
+}
+#content{
+    flex-grow: 3;
+}
+#adspace{
+    flex-grow: 1;
+}
+
+footer{
+    height: 10vh;
+}
+.personalinfo{
+   
+    flex-direction: row; 
+    align-content: center;
+}
